@@ -1,0 +1,47 @@
+
+
+// レイアウト幅
+$layout-width-canvas-sp: 600px;
+// $layout-width-canvas-tab: 1025px;
+$layout-width-canvas-pc: 1025px;
+
+// ブレークポイント
+$breakpoints: (
+	"sp-down": "(max-width: #{$layout-width-canvas-sp - 1px})",
+	"sp-up": "(min-width: #{$layout-width-canvas-sp})",
+	// "tab-down": "(max-width: #{$layout-width-canvas-tab - 1px})",
+	// "tab-up": "(min-width: #{$layout-width-canvas-tab})",
+	"pc-down": "(max-width: #{$layout-width-canvas-pc - 1px})",
+	"pc-up": "(min-width: #{$layout-width-canvas-pc})",
+);
+
+// メディアクエリー
+@mixin mq($breakpoint: "pc-up") {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+
+
+
+
+// 書き方
+// .header {
+//   @include mixin.media("pc") {
+//     background-color: #333;
+//   }
+
+// }
+
+// ブレイクポイント↑ーーーーーーーーーー
+
+
+// フォントーーーーー
+@mixin font-size($size, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / $base) + rem;
+}
+
+// 書き方
+// @include mixin.font-size(40);

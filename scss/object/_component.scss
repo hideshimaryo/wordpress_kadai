@@ -1,0 +1,171 @@
+@use "../foundation/mixin";
+
+.c-site-title{
+  @include mixin.font-size(40);
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #707070;
+}
+
+.c-heading{
+  color: #fff;
+  font-weight: bold;
+  text-align-last: left;
+  position: absolute;
+  height: 100%;
+  top: 46%;
+  left: 25px;
+  @include mixin.font-size(36);
+  @include mixin.mq("sp-up") {
+    @include mixin.font-size(40);
+  }
+}
+
+.c-article_heading{
+  color: #fff;
+  font-size: 41px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+.c-article_heading::after{
+  content: "";
+  width: 33px;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+  display: inline-block;
+  bottom: -20px;
+  left: 0;
+}
+
+.c-title{
+  font-size: 22px;
+  font-weight: bold;
+  font-family: M+ 1m;
+  color: #3C2A10;
+  margin-bottom: 8px;
+}
+
+.c-desc{
+  font-size: 16px;
+  font-family: M+ 1m;
+  color: #3C2A10;
+}
+
+.c-map-title{
+  font-size: 30px;
+  color: #fff;
+  font-weight: bold;
+  z-index: 3;
+  position: relative;
+  &::after{
+    content: "";
+    width: 75px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    display: inline-block;
+    bottom: -16px;
+    left: 0;
+  }
+}
+
+.c-map-text{
+  color: #fff;
+  line-height: 33px;
+  z-index: 3;
+  margin-top: 28px;
+  @include mixin.mq("sp-up") {
+    width: 697px;
+    font-size: 16px;
+}
+}
+
+
+// ハンバーガーメニュー↑ーーー
+
+.c-content_bg{
+  background-color: rgba(255,255,255,0.8);
+  padding: 14px 20px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  // position: absolute;
+  // bottom: 188px;
+  
+}
+
+.c-content-subheading{
+  @include mixin.font-size(24);
+  margin-bottom: 18px;
+}
+
+.c-content-text{
+  @include mixin.font-size(16);
+}
+
+.c-content-title{
+  color: #fff;
+  font-size: 41px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  &::after{
+    content: "";
+  width: 33px;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+  display: inline-block;
+  bottom: -20px;
+  left: 0;
+  }
+}
+
+.c-copyright{
+  @include mixin.font-size(14);
+}
+
+// アーカイブ↓ーーーーーーー
+.c-archive-heading{
+  font-weight: bold;
+  @include mixin.font-size(36);
+  @include mixin.mq("sp-down"){
+    @include mixin.font-size(28);
+  }
+}
+
+.c-archive-text{
+  margin-top: 20px;
+  margin-bottom: 70px;
+  line-height: 24px;
+  @include mixin.mq("sp-down"){
+    margin-bottom: 20px;
+  }
+}
+
+.c-burger-card__button{
+  width: 43%;
+  min-width: 160px;
+  height: 76px;
+  background-color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  margin: 60px auto 0 auto;
+  display: block;
+  @include mixin.mq("pc-down"){
+    margin-top: 45px;
+    width: 163px;
+    height: 42px;
+  }
+  @include mixin.mq("sp-down"){
+    margin-top: 40px;
+  }
+
+  a{
+    color: #707070;
+    font-weight: bold;
+  }
+}
+

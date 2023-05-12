@@ -1,0 +1,130 @@
+@use "../foundation/mixin";
+
+.l-main-contents{
+  width: 81%;
+  @include mixin.mq("pc-down"){
+    width: 100%;
+  }
+}
+
+// .l-main-contents.is-open{
+//   position: fixed;
+// }
+
+.l-contents{
+  // height: 1447px;
+  background-color: #fff;
+  padding-top: 120px;
+  padding-bottom: 130px;
+  @include mixin.mq("pc-down") {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  }
+  @include mixin.mq("sp-down") {
+    padding-top: 20px;
+    padding-bottom: 49px;
+    }
+}
+
+.l-contents__brunch-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: stretch;
+  @include mixin.mq("sp-down") {
+    flex-direction: column;
+    & > li{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.l-access{
+  // height: 649px;
+  background-image: url(/images/map.pc.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-weight: bold;
+  padding-top: 86px;
+  padding-bottom: 75px;
+  position: relative;
+  @include mixin.mq("pc-down") {
+  padding-top: 42px;
+  padding-bottom: 40px;
+  }
+  @include mixin.mq("sp-down") {
+  padding-bottom: 57px;
+  }
+  &::before{
+  content: ""; /* 内容は不要 */
+  display: block; /* ブロック要素にする */
+  position: absolute; /* 親要素に対して配置するために必要 */
+  top: 0; /* 親要素の左上隅に配置 */
+  left: 0;
+  width: 100%; /* 親要素と同じ幅・高さ */
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8); /* 黒色の透明度を調整 */
+  z-index: -2;
+  @include mixin.mq("pc-down") {
+    background-color: rgba(0, 0, 0, 1);
+  }
+  @include mixin.mq("sp-down") {
+    background-color: rgba(0, 0, 0, .8);
+  }
+  }
+  &::after{
+  content: ""; /* 内容は不要 */
+  display: block; /* ブロック要素にする */
+  position: absolute; /* 親要素に対して配置するために必要 */
+  top: 0; /* 親要素の左上隅に配置 */
+  left: 0;
+  width: 61%; /* 親要素と同じ幅・高さ */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1); /* 黒色の透明度を調整 */
+  z-index: -1;
+  @include mixin.mq("pc-down") {
+    width: 100%;
+    height: 60%
+  }
+  }
+}
+
+
+
+.l-access__heading{
+  @include mixin.font-size(36);
+  margin-bottom: 109px;
+  position: relative;
+  @include mixin.mq("pc-down") {
+    @include mixin.font-size(30);
+    margin-bottom: 29px;
+  }
+  &:after{
+  content: "";
+  width: 75px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  display: inline-block;
+  bottom: -50px;
+  left: 0;
+  @include mixin.mq("pc-down") {
+    bottom: -15px;
+  }
+  }
+}
+
+.l-access__text{
+  @include mixin.font-size(16);
+  line-height: 33px;
+  width: 49%;
+  @include mixin.mq("pc-down") {
+    width: 100%;
+  }
+  @include mixin.mq("sp-down") {
+  @include mixin.font-size(14);
+  }
+}
+

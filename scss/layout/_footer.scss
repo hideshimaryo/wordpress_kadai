@@ -1,0 +1,47 @@
+@use "../foundation/mixin";
+@use "../foundation/color";
+
+.l-footer{
+  height: 150px;
+  background-color: color.$c-footer_color;
+  background-image: url(/images/footer-mask.png);
+  color: #fff;
+  text-align: center;
+  padding-top: 41px;
+  padding-bottom: 27px;
+  position: relative;
+  @include mixin.mq("pc-down") {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  }
+  @include mixin.mq("sp-down") {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  }
+}
+
+
+.l-footer__menu{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  .l-footer__item{
+  position: relative;
+  padding: 0 20px;
+  @include mixin.font-size(20);
+  @include mixin.mq("sp-down") {
+    @include mixin.font-size(16);
+    margin-bottom: 70px;
+    }
+  &:first-child::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #fff;
+  }
+  }
+  
+}

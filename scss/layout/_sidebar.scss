@@ -1,0 +1,104 @@
+@use "../foundation/mixin";
+@use "../foundation/color";
+
+
+.l-sidebar{
+  background-color: color.$c-side_color;
+  width: 19%;
+  color: #707070;
+  padding-top: 84px;
+  padding-left: 46px;
+  min-width: 300px;
+  position: relative;
+  transition: all .3s;
+ 
+  @include mixin.mq("pc-down"){
+    // width: 100%;
+    position: absolute;
+    right: -100%;
+  }
+}
+
+@include mixin.mq("pc-down"){
+  .l-sidebar.is-open{
+    position: absolute;
+      width: 100%;
+      right: 0%;
+      width: 367px;
+      height: 100%;
+      background-color: color.$c-side_color;
+      z-index: 100;
+      overflow-y: scroll;
+      height: 100vh;
+  }
+}
+
+.l-sidebar__title{
+  @include mixin.font-size(34);
+  font-weight: bold;
+  margin-bottom: 90px;
+  @include mixin.mq("pc-down") {
+    display: none;
+  }
+}
+
+.l-sidebar__menu-list{
+  // width: 328px;
+  background-color: #F2EDE9;
+  text-align-last: left;
+  color: #707070;
+  font-family: mplus-1m;
+  &__bold{
+    margin-bottom: 32px;
+    font-weight: bold;
+    @include mixin.font-size(24);
+  }
+  &__normal{
+    padding-left: 20px;
+    @include mixin.font-size(20);
+    li{
+      margin-bottom: 20px;
+      &:last-child{
+        margin-bottom: 48px;
+      }
+    }
+  }
+}
+
+.l-sidebar__close{
+  display: none;
+  @include mixin.mq("pc-down") {
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  &:hover{
+    cursor: pointer;
+  }
+  }
+}
+
+.l-sidebar__close::after,
+.l-sidebar__close::before{
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 6px; /* 棒の幅（太さ） */
+  height: 46px; /* 棒の高さ */
+  background: #707070;
+}
+
+.l-sidebar__close::after{
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+.l-sidebar__close::before{
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.l-sidebar__menu-list.is-open{
+  height: 100vh;
+}
