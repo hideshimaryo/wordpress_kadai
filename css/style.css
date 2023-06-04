@@ -34,7 +34,7 @@ body {
 .l-footer {
   height: 150px;
   background-color: #9D8670;
-  background-image: url(/images/footer-mask.png);
+  background-image: url("http://hamburgersite.local/wp-content/uploads/2023/05/footer-mask.png");
   color: #fff;
   text-align: center;
   padding-top: 41px;
@@ -169,7 +169,7 @@ body {
 }
 
 .l-access {
-  background-image: url(/images/map.pc.png);
+  background-image: url("http://hamburgersite.local/wp-content/uploads/2023/05/map.pc_.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -325,21 +325,24 @@ body {
   color: #707070;
   font-family: mplus-1m;
 }
-.l-sidebar__menu-list__bold {
-  margin-bottom: 32px;
+
+.menu-categorymenu-container .menu-item-type-taxonomy a {
   font-weight: bold;
   font-size: 24px;
   font-size: 1.5rem;
 }
-.l-sidebar__menu-list__normal {
+
+.menu-categorymenu-container .sub-menu {
+  margin-top: 32px;
   padding-left: 20px;
   font-size: 20px;
   font-size: 1.25rem;
 }
-.l-sidebar__menu-list__normal li {
+
+.menu-categorymenu-container .sub-menu li {
   margin-bottom: 20px;
 }
-.l-sidebar__menu-list__normal li:last-child {
+.menu-categorymenu-container .sub-menu li:last-child {
   margin-bottom: 48px;
 }
 
@@ -661,7 +664,7 @@ body {
 
 .p-fv {
   height: 530px;
-  background-image: url(/images/main_visual.jpg);
+  background-image: url("http://hamburgersite.local/wp-content/uploads/2023/05/main_visual.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -679,7 +682,7 @@ body {
 @media (max-width: 599px) {
   .p-fv {
     height: 375px;
-    background-image: url(/images/sp_fv.jpg);
+    background-image: url("http://hamburgersite.local/wp-content/uploads/2023/05/sp_fv.jpg");
   }
 }
 
