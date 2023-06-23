@@ -11,3 +11,77 @@
 @use "object/component";
 @use "object/project";
 @use "object/utility";
+
+.wp-pagenavi {
+	clear: both;
+	text-align:center;
+  margin-top: 150px;
+  margin-bottom: 64px;
+
+}
+.wp-pagenavi a, .wp-pagenavi span {
+	color: color.$c-text;
+	background-color: #FFFFFF;
+	padding: 8px 15px;
+	margin: 0 2px;
+	white-space: nowrap;
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+	text-align: center;
+	text-decoration: none;
+	border: solid 1px color.$c-text;
+}
+.wp-pagenavi a:hover{
+	color: #fff;
+	background-color: color.$c-text;
+    }
+.wp-pagenavi span.current{
+	color: #fff;
+	background-color: color.$c-text;
+    }
+.wp-pagenavi {
+  .pages{
+  border: none;
+  }
+  .previouspostslink{
+    border: none;
+  }
+  .nextpostslink{
+    border: none;
+  }
+}
+
+.p-single-top-view{
+  height: 530px;
+  background-image: url("../images/single-top.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  font-weight: bold;
+  @include mixin.font-size(60);
+  color: #fff;
+  @include mixin.mq("pc-down"){
+    height: 505px;
+  }
+  @include mixin.mq("sp-down"){
+    height: 225px;
+    @include mixin.font-size(36);
+  }
+}
+
+.p-single-top-view__title{
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
+  @include mixin.mq("pc-down"){
+  left: 10%;
+  @include mixin.font-size(36);
+  }
+  @include mixin.mq("sp-down"){
+  left: 7%;
+  }
+}

@@ -1,9 +1,12 @@
 <?php get_header(); ?>
 
         <main class="main-area">
-
+        <?php
+  $cat = get_the_category();
+  $cat = $cat[0];
+?>
           <div class="p-archive-top-view">
-            <h2 class="p-archive-top-view__title">Menu:<span class="p-archive-top-view__sub-title">チーズバーガー</span></h2>
+            <h2 class="p-archive-top-view__title">Menu:<span class="p-archive-top-view__sub-title"><?php echo $cat->name; ?></span></h2>
             <div class="p-archive-top-view__mask"></div>
           </div>
           
@@ -16,49 +19,35 @@
               テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
               テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
             </p>
-<!-- 
-            <figure class="p-burger-card">
-              <div class="p-burger-card__img">
-                <img src="images/archive-card.jpg" alt="">
-              </div>
-              <figcaption class="p-burger-card__text">
-                <h4 class="p-burger-card__title">チーズバーガー</h4>
-                <p class="p-burger-card__text__bold">小見出しが入ります</p>
-                <p class="p-burger-card__text__normal">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                  テキストが入ります。テキストが入ります。</p>
-                <button class="c-burger-card__button">
-                  <a href="#">詳しく見る</a>
-                </button>
-              </figcaption>
-            </figure> -->
 
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-            
-            <div class="p-burger-card__img">
-              <?php if ( has_post_thumbnail() ) : ?>
-                <?php the_post_thumbnail(); ?>
-                <?php else: ?>
-                  <img src="//placehold.jp/700x500.png" alt="">
-                  <?php endif; ?>
-            </div>
-            <figcaption class="p-burger-card__text">
-              <h4 class="p-burger-card__title"><?php the_title(); ?></h4>
-              <p class="p-burger-card__text__bold">小見出しが入ります</p>
-              <p class="p-burger-card__text__normal">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                テキストが入ります。テキストが入ります。</p>
-                <button class="c-burger-card__button">
-                  <a href="<?php the_permalink(); ?>">詳しく見る</a>
-                </button>
-              </figcaption>
-              
-              <?php endwhile; endif; ?>
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
+  <figure class="p-burger-card">
+    <div class="p-burger-card__img">
+      <?php if ( has_post_thumbnail() ) : ?>
+        <?php the_post_thumbnail('medium'); ?>
+      <?php else : ?>
+        <img src="<?php echo get_template_directory_uri() . '/images/archive-card.jpg'; ?>" alt="ダミー画像">
+      <?php endif; ?>
+    </div>
+    <figcaption class="p-burger-card__text">
+      <h4 class="p-burger-card__title"><?php the_title(); ?></h4>
+      <p class="p-burger-card__text__bold">小見出しが入ります</p>
+      <p class="p-burger-card__text__normal">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+        テキストが入ります。テキストが入ります。</p>
+      <button class="c-burger-card__button">
+        <a href="<?php the_permalink(); ?>">詳しく見る</a>
+      </button>
+    </figcaption>
+  </figure>
+
+<?php endwhile; endif; ?>
             
           </div>
          </section>
 
          
-         <ul class="p-navigation">
+         <!-- <ul class="p-navigation">
           <li class="p-navigation__item">
             <p class="p-navgation__text">page 1/10</p>
           </li>
@@ -112,7 +101,9 @@
         <li class="p-sp-navigation__item"><a href="#">次へ<svg xmlns="http://www.w3.org/2000/svg" class="p-navigation__item__link-Icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
           <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
       </svg></a></li>
-      </ul>
+      </ul> -->
+
+      <?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
 
         </main>
       </div>

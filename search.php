@@ -33,12 +33,13 @@
             </figure> -->
 
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-            
+            <figure class="p-burger-card">
             <div class="p-burger-card__img">
               <?php if ( has_post_thumbnail() ) : ?>
                 <?php the_post_thumbnail(); ?>
                 <?php else: ?>
                   <img src="//placehold.jp/700x500.png" alt="">
+                  
                   <?php endif; ?>
             </div>
             <figcaption class="p-burger-card__text">
@@ -52,11 +53,12 @@
                   <a href="<?php the_permalink(); ?>">詳しく見る</a>
                 </button>
               </figcaption>
+              </figure>
               <?php endwhile; ?>
               <?php else : ?>
                 <p class="none-search">検索結果が0件です。<br>別のキーワードで検索してください。</p>
               <?php endif; ?>
-
+             
             
           </div>
          </section>

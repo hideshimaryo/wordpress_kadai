@@ -16,7 +16,7 @@
     <div class="l-main-contents">
       <header class="l-header">
         <div class="l-header-inner">
-          <h1 class="l-header-title">Hamburger</h1>
+          <h1 class="l-header-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Hamburger</a></h1>
           <div class="p-search-container">
             <?php get_search_form(); ?>
           </div>
