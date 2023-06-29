@@ -2,8 +2,8 @@
 
         <main class="main-area">
 
-          <div class="p-single-fv"><?php get_the_title(); ?>
-            <h2 class="p-single-fv__title"><?php single_post_title(); ?></h2>
+          <div class="p-page-fv">
+            <h2 class="p-single-fv__title">ショップについて</h2>
           </div>
 
           <div class="p-single-page l-single-page">
@@ -19,7 +19,7 @@
                     <p>Blockquote 引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用
                         タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
                         引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ</p>
-                    <cite><a href="">出典元：<span>○○○○○○○○○○○○</span></a></cite>
+                    <cite><a href="#">出典元：<span>○○○○○○○○○○○○</span></a></cite>
                 </blockquote>
                 <div class="image-large">
                     <img src="<?php echo get_theme_file_uri(); ?>/images/cooked-foods-large.jpg" alt="">
@@ -29,7 +29,7 @@
                         テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります
                       </div>
                       <div class="flex-image">   
-                        <img src="<?php echo get_theme_file_uri("/images/cooked-foods-middle.jpg"); ?>" alt="">
+                        <img src="<?php echo get_theme_file_uri("images/cooked-foods-middle.jpg"); ?>" alt="">
                     </div>
                 </div>
                 <div class="flex">
@@ -72,6 +72,7 @@
                         <img src="<?php echo get_theme_file_uri(); ?>/images/hamburger-small.jpg" alt="">
                     </div>
                 </div><!--p-flex-wrap-->
+
 
                 <ol class="p-single-page__order-list">
                   <li>リストリストリスト</li>
@@ -143,9 +144,6 @@
 
                </div>  <!-- ----/inner -->
 
-
-
-          
         </main>
       </div>
       
@@ -154,5 +152,4 @@
     </div>
     </div>
 
-
-   <?php get_footer(); ?>
+<?php get_footer(); ?>
