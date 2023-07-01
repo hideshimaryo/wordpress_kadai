@@ -75,7 +75,7 @@
 
 .p-fv{
   height: 530px;
-  background-image: url("//hamburgersite.local/wp-content/uploads/2023/05/main_visual.jpg");
+  background-image: url(../images/main_visual.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -88,7 +88,7 @@
   }
   @include mixin.mq("sp-down"){
     height: 375px;
-    background-image: url("//hamburgersite.local/wp-content/uploads/2023/05/sp_fv.jpg");
+    background-image: url(../images/sp_fv.jpg);
   }
 }
 
