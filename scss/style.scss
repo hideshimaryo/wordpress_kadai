@@ -134,12 +134,12 @@
     margin-bottom: 60px;
   }
   
-  blockquote span{
+  blockquote cite a{
     text-decoration: underline;
     color: #4A6C9B;
   }
   
-  .image-large{
+  .wp-block-image,.image-large{
     margin-bottom: 60px;
   }
   .flex{
@@ -250,16 +250,15 @@
     @include mixin.font-size(36);
     }
   }
-  
-  .p-single-page__order-list{
+  .page-template-default ol,.p-single-page__order-list{
     list-style-type: decimal;
     margin-left: 50px;
     margin-bottom: 18px;
   }
   
   
-  .p-single__list{
-    margin-left: 50px;
+  .page-template-default ul,.p-single__list{
+    margin-left: 30px;
     margin-bottom: 18px;
   }
   
@@ -274,7 +273,7 @@
   }
   
   
-  .p-single-page__code{
+  .wp-block-code,.p-single-page__code{
     background-color: #F5F5F5;
     padding: 50px 60px 50px 50px;
     margin-bottom: 50px;
@@ -290,7 +289,7 @@
     }
   }
   
-  .p-single-page__table{
+  .wp-block-table,.p-single-page__table{
     width: 100%;
     margin-bottom: 60px;
     td:first-child{
@@ -302,7 +301,7 @@
     }
   }
   
-  .p-single-page__button{
+  .wp-block-button__link,.p-single-page__button{
     display: block;
     font-weight: bold;
     padding: 40px 190px;
@@ -310,6 +309,7 @@
     border-radius: 20px;
     background:linear-gradient(to right, #DED8D3,#F2EDE9);
     margin-bottom: 60px;
+    color: #3C2A10;
   }
   
   .p-single-page__bold{
@@ -342,3 +342,14 @@
       background-image: url(../images/single-top.jpg);
     }
   }
+.l-sidebar__menu-list .sub-menu a{
+font-weight: normal;
+}
+
+.wp-block-image.size-full.is-resized{
+  img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+}

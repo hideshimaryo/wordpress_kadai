@@ -26,13 +26,18 @@
            wp_enqueue_style(  'web-font', '//fonts.googleapis.com', array(), '' );
            wp_enqueue_style(  'web-font2', '//fonts.gstatic.com', array(), '' );
            wp_enqueue_style(  'hamburger', get_theme_file_uri( '/css/style.css' ), array() );
+           wp_enqueue_style(  'hamburger2', get_theme_file_uri( '/css/editor-style.css' ), array() );
           //  wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.6.4.min.js', '', '', true );
            wp_enqueue_script( 'bundle', get_theme_file_uri( '/js/main.js' ), 'jquery', true );
           }
           add_action( 'wp_enqueue_scripts', 'readScript' );
 
-          
-          function my_theme_add_editor_styles() {
-            add_editor_style( 'editor-style.css' );
-        }
-        add_action( 'admin_init', 'my_theme_add_editor_styles' );
+        
+
+        //GutenbergにオリジナルのCSSを適用する
+add_action('after_setup_theme', 'block_editor_css');
+function block_editor_css() {
+	add_theme_support('editor-styles');
+	add_editor_style('page.css'); //サイトオリジナル
+	add_editor_style('css/editor-style.css'); //エディタ専用
+}

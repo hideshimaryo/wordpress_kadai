@@ -1091,11 +1091,11 @@ body {
 .p-single-page blockquote p {
   margin-bottom: 60px;
 }
-.p-single-page blockquote span {
+.p-single-page blockquote cite a {
   text-decoration: underline;
   color: #4A6C9B;
 }
-.p-single-page .image-large {
+.p-single-page .wp-block-image, .p-single-page .image-large {
   margin-bottom: 60px;
 }
 .p-single-page .flex {
@@ -1207,14 +1207,14 @@ body {
   }
 }
 
-.p-single-page__order-list {
+.page-template-default ol, .p-single-page__order-list {
   list-style-type: decimal;
   margin-left: 50px;
   margin-bottom: 18px;
 }
 
-.p-single__list {
-  margin-left: 50px;
+.page-template-default ul, .p-single__list {
+  margin-left: 30px;
   margin-bottom: 18px;
 }
 
@@ -1226,35 +1226,35 @@ body {
   margin-left: 68px;
 }
 
-.p-single-page__code {
+.wp-block-code, .p-single-page__code {
   background-color: #F5F5F5;
   padding: 50px 60px 50px 50px;
   margin-bottom: 50px;
 }
-.p-single-page__code p {
+.wp-block-code p, .p-single-page__code p {
   margin-left: 32px;
   margin-bottom: 0;
 }
-.p-single-page__code p:first-child {
+.wp-block-code p:first-child, .p-single-page__code p:first-child {
   margin-left: 0;
 }
-.p-single-page__code p:last-child {
+.wp-block-code p:last-child, .p-single-page__code p:last-child {
   margin-left: 0;
 }
 
-.p-single-page__table {
+.wp-block-table, .p-single-page__table {
   width: 100%;
   margin-bottom: 60px;
 }
-.p-single-page__table td:first-child {
+.wp-block-table td:first-child, .p-single-page__table td:first-child {
   width: 30%;
 }
-.p-single-page__table td {
+.wp-block-table td, .p-single-page__table td {
   border: solid 1px #707070;
   padding: 29px 0 24px 30px;
 }
 
-.p-single-page__button {
+.wp-block-button__link, .p-single-page__button {
   display: block;
   font-weight: bold;
   padding: 40px 190px;
@@ -1262,6 +1262,7 @@ body {
   border-radius: 20px;
   background: linear-gradient(to right, #DED8D3, #F2EDE9);
   margin-bottom: 60px;
+  color: #3C2A10;
 }
 
 .p-single-page__bold {
@@ -1300,5 +1301,16 @@ body {
     height: 225px;
     background-image: url(../images/single-top.jpg);
   }
+}
+
+.l-sidebar__menu-list .sub-menu a {
+  font-weight: normal;
+}
+
+.wp-block-image.size-full.is-resized img {
+  width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */
